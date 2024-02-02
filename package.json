@@ -42,8 +42,7 @@
   "scripts": {
     "tsc": "tsc",
     "clean": "rimraf lib && rimraf types && rimraf **/models && rimraf *.tgz",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "npm run clean && tsc",
     "start": "tsc && concurrently \"tsc --watch\"  \" nodemon --delay 1000ms index.js\"",
     "prepack": "crlf --set=LF bin/sequelize-auto",
     "test": "npm run test-mssql && npm run test-mysql && npm run test-postgres && npm run test-sqlite",
@@ -95,6 +94,7 @@
     "pg-hstore": "^2.3.3",
     "rimraf": "^3.0.2",
     "sequelize": "^6.11",
+    "sqlite3": "5.0.2",
     "tedious": "^11.0.6",
     "typescript": "^4.2.3"
   }
