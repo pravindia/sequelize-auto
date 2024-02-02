@@ -19,7 +19,7 @@ export class AutoBuilder {
   constructor(sequelize: Sequelize, options: AutoOptions) {
     this.sequelize = sequelize;
     this.queryInterface = this.sequelize.getQueryInterface();
-    this.dialect = dialects[this.sequelize.getDialect() as Dialect];
+    this.dialect = dialects[this.sequelize.getDialect() as Exclude<Dialect, 'db2' | 'snowflake' | 'oracle'>];
     this.includeTables = options.tables;
     this.skipTables = options.skipTables;
     this.schema = options.schema;

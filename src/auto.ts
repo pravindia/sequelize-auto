@@ -72,7 +72,7 @@ export class SequelizeAuto {
   }
 
   generate(tableData: TableData) {
-    const dialect = dialects[this.sequelize.getDialect() as Dialect];
+    const dialect = dialects[this.sequelize.getDialect() as Exclude<Dialect, 'db2' | 'snowflake' | 'oracle'>];
     const generator = new AutoGenerator(tableData, dialect, this.options);
     return generator.generateText();
   }
