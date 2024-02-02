@@ -138,7 +138,7 @@ export class UserModel extends Model<User, UserCreationAttributes> implements Us
   createOrganisation!: Sequelize.BelongsToManyCreateAssociationMixin<OrganisationModel>;
   removeOrganisation!: Sequelize.BelongsToManyRemoveAssociationMixin<OrganisationModel, OrganisationId>;
   removeOrganisations!: Sequelize.BelongsToManyRemoveAssociationsMixin<OrganisationModel, OrganisationId>;
-  hasOrganisationId_organisation!: Sequelize.BelongsToManyHasAssociationMixin<OrganisationModel, OrganisationId>;
+  hasOrganisation!: Sequelize.BelongsToManyHasAssociationMixin<OrganisationModel, OrganisationId>;
   hasOrganisations!: Sequelize.BelongsToManyHasAssociationsMixin<OrganisationModel, OrganisationId>;
   countOrganisations!: Sequelize.BelongsToManyCountAssociationsMixin;
   // User hasMany Patient via userId

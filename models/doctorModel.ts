@@ -125,7 +125,7 @@ export class DoctorModel extends Model<Doctor, DoctorCreationAttributes> impleme
   createSpecialty!: Sequelize.BelongsToManyCreateAssociationMixin<SpecialtyModel>;
   removeSpecialty!: Sequelize.BelongsToManyRemoveAssociationMixin<SpecialtyModel, SpecialtyId>;
   removeSpecialties!: Sequelize.BelongsToManyRemoveAssociationsMixin<SpecialtyModel, SpecialtyId>;
-  hasSpecialtyId_specialty!: Sequelize.BelongsToManyHasAssociationMixin<SpecialtyModel, SpecialtyId>;
+  hasSpecialty!: Sequelize.BelongsToManyHasAssociationMixin<SpecialtyModel, SpecialtyId>;
   hasSpecialties!: Sequelize.BelongsToManyHasAssociationsMixin<SpecialtyModel, SpecialtyId>;
   countSpecialties!: Sequelize.BelongsToManyCountAssociationsMixin;
   // Doctor belongsTo User via userId

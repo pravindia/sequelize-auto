@@ -95,7 +95,7 @@ export class OrganisationModel extends Model<Organisation, OrganisationCreationA
   createUser!: Sequelize.BelongsToManyCreateAssociationMixin<UserModel>;
   removeUser!: Sequelize.BelongsToManyRemoveAssociationMixin<UserModel, UserId>;
   removeUsers!: Sequelize.BelongsToManyRemoveAssociationsMixin<UserModel, UserId>;
-  hasUserId_user!: Sequelize.BelongsToManyHasAssociationMixin<UserModel, UserId>;
+  hasUser!: Sequelize.BelongsToManyHasAssociationMixin<UserModel, UserId>;
   hasUsers!: Sequelize.BelongsToManyHasAssociationsMixin<UserModel, UserId>;
   countUsers!: Sequelize.BelongsToManyCountAssociationsMixin;
 

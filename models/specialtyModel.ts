@@ -42,7 +42,7 @@ export class SpecialtyModel extends Model<Specialty, SpecialtyCreationAttributes
   createDoctor!: Sequelize.BelongsToManyCreateAssociationMixin<DoctorModel>;
   removeDoctor!: Sequelize.BelongsToManyRemoveAssociationMixin<DoctorModel, DoctorId>;
   removeDoctors!: Sequelize.BelongsToManyRemoveAssociationsMixin<DoctorModel, DoctorId>;
-  hasDoctorId_doctor!: Sequelize.BelongsToManyHasAssociationMixin<DoctorModel, DoctorId>;
+  hasDoctor!: Sequelize.BelongsToManyHasAssociationMixin<DoctorModel, DoctorId>;
   hasDoctors!: Sequelize.BelongsToManyHasAssociationsMixin<DoctorModel, DoctorId>;
   countDoctors!: Sequelize.BelongsToManyCountAssociationsMixin;
 
